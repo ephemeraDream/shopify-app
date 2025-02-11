@@ -1,0 +1,51 @@
+{# 文件路径: extensions/product-reviews/blocks/review-form.liquid #}
+<div class="review-form-container">
+  <h3>发表您的评论</h3>
+  <form id="review-form" enctype="multipart/form-data">
+    <textarea 
+      name="comment" 
+      placeholder="请输入您的评论..." 
+      required
+    ></textarea>
+    
+    <div class="file-upload">
+      <label for="review-images">上传图片（最多3张）</label>
+      <input 
+        type="file" 
+        id="review-images"
+        name="images[]" 
+        accept="image/png, image/jpeg" 
+        multiple
+        max="3"
+      >
+    </div>
+
+    <button type="submit" class="submit-button">提交评论</button>
+  </form>
+</div>
+
+<script src="{{ 'review-form.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "商品评论表单",
+  "target": "section",
+  "templates": ["product"],
+  "settings": []
+}
+{% endschema %}
+
+<style>
+.review-form-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #e1e1e1;
+}
+.submit-button {
+  background: #008060;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+</style>
