@@ -18,11 +18,4 @@
     "baseUrl": ".",
     "types": ["node"]
   },
-  "paths": {
-    "@/*": ["./app/*"],
-    "Types/*": ["./app/types/*"],
-    "Apis/*": ["./app/api/*"],
-    "Plugins/*": ["./app/plugins/*"],
-    "Config/*": ["./app/config/*"]
-  },
 }

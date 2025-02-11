@@ -8,6 +8,13 @@ export const shopify = shopifyApi({
   apiSecretKey: process.env.SHOPIFY_API_SECRET,
   apiVersion: LATEST_API_VERSION,
   isEmbeddedApp: true,
+  hostName: process.env.HOST_NAME,
+  logger: {
+    log: console.log,
+    level: 'info',
+    httpRequests: false,
+    timestamps: false,
+  },
 });
 
 // 创建 GraphQL 客户端

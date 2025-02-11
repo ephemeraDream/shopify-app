@@ -6,7 +6,7 @@ import polarisStyles from "@shopify/polaris/build/esm/styles.css?url";
 import { authenticate } from "../shopify.server";
 import express from "express";
 import fileUpload from "express-fileupload";
-import reviewsRouter from "./routes/reviews";
+import reviewsRouter from "./reviews";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 

@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "64606509beb5f37e04e354bec5cb6b32"
-application_url = "https://9b7b-240e-391-e75-c310-c04b-d613-ddd8-b040.ngrok-free.app"
+application_url = "https://c752-60-176-176-114.ngrok-free.app"
 embedded = true
 name = "comment-app"
 handle = "comment-app-10"
@@ -9,6 +9,7 @@ handle = "comment-app-10"
 [build]
 include_config_on_deploy = true
 automatically_update_urls_on_dev = true
+dev_store_url = "xinqidianzi.myshopify.com"
 
 [webhooks]
 api_version = "2025-01"
@@ -27,9 +28,9 @@ scopes = "write_products,write_files,read_products,read_content,write_content"
 
 [auth]
 redirect_urls = [
-  "https://9b7b-240e-391-e75-c310-c04b-d613-ddd8-b040.ngrok-free.app/auth/callback",
-  "https://9b7b-240e-391-e75-c310-c04b-d613-ddd8-b040.ngrok-free.app/auth/shopify/callback",
-  "https://9b7b-240e-391-e75-c310-c04b-d613-ddd8-b040.ngrok-free.app/api/auth/callback"
+  "https://c752-60-176-176-114.ngrok-free.app/auth/callback",
+  "https://c752-60-176-176-114.ngrok-free.app/auth/shopify/callback",
+  "https://c752-60-176-176-114.ngrok-free.app/api/auth/callback"
 ]
 
 [pos]
