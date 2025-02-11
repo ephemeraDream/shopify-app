@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const imageForm = new FormData();
       imageForm.append('file', file);
       
-      const res = await fetch('/apps/api/reviews/upload', {
+      const res = await fetch('/apps/reviews-api/upload', {
         method: 'POST',
         body: imageForm
       });

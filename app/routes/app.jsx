@@ -49,7 +49,7 @@ app.use(express.json());
 app.use(fileUpload());
 
 // 路由
-app.use("/api/reviews", reviewsRouter);
+app.use('/apps/reviews-api', reviewsRouter);
 
 // 启动服务
 app.listen(3000, () => {
@@ -59,4 +59,10 @@ app.listen(3000, () => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("服务器内部错误");
+});
+
+app._router.stack.forEach((layer) => {
+  if (layer.route) {
+    console.log(`${layer.route.stack[0].method.toUpperCase()} ${layer.route.path}`);
+  }
 });
